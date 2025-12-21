@@ -6,6 +6,8 @@ public class Rectangles {
     private int id;
     private static int idGen;
 
+    public 
+
     public Rectangles (){
         this.width = 1.0;
         this.height = 1.0;

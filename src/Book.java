@@ -1,14 +1,14 @@
 public class Book {
     private int id;
-    private static int idGen;
+    private static int idGen=1;
     private String title;
     private String author;
     private int year;
-    private boolean avialable;
+    private boolean available;
 
     public Book() {
         this.id = idGen++;
-        this.avialable = true;
+        this.available = true;
     }
 
     public Book(String title, String author, int year) {
@@ -19,23 +19,28 @@ public class Book {
     }
 
     public int getId() {
+
         return id;
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public String getAuthor() {
+
         return author;
     }
 
     public int getYear() {
+
         return year;
     }
 
-    public boolean isAvialable() {
-        return avialable;
+    public boolean isAvailable() {
+
+        return available;
     }
 
     public void setTitle(String title) {
@@ -46,7 +51,7 @@ public class Book {
     }
 
     public void setAuthor(String author) {
-        if (author == null || title.trim().isEmpty()) {
+        if (author == null || author.trim().isEmpty()) {
             throw new IllegalArgumentException("Author must not be null or empty");
         }
         this.author = author;
@@ -62,15 +67,17 @@ public class Book {
             this.year = year;
         }
 
-    public void setAvialable(boolean avialable) {
-        this.avialable = avialable;
+    public void setAvailable(boolean avialable) {
+        this.available = avialable;
     }
 
     public void markAsBorrowed(){
-        this.avialable=false;
+
+        this.available=false;
     }
     public void markAsReturned(){
-        this.avialable=true;
+
+        this.available=true;
     }
 
     @Override
@@ -80,7 +87,7 @@ public class Book {
                 ", id=" + id +
                 ", title='" + title + '\'' +
                 ", year=" + year +
-                ", avialable=" + avialable +
+                ", available=" + available +
                 '}';
     }
 }
