@@ -37,7 +37,7 @@ public class Rectangles {
     }
 
     public void setHeight(double height) {
-        if (height < 0) {
+        if (height <= 0) {
             throw new IllegalArgumentException("Width must be greater than 0");
         }
         this.height = height;
