@@ -4,9 +4,7 @@ public class Rectangles {
     private double width;
     private double height;
     private int id;
-    private static int idGen;
-
-    public 
+    private static int idGen; 
 
     public Rectangles (){
         this.width = 1.0;
