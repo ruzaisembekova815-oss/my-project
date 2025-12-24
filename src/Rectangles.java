@@ -1,5 +1,3 @@
-import java.util.Set;
-
 public class Rectangles {
     private double width;
     private double height;
