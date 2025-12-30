@@ -2,8 +2,12 @@ public class Rectangles {
     private double width;
     private double height;
     private int id;
+<<<<<<< HEAD
     private static int idGen;
 
+=======
+    private static int idGen; 
+>>>>>>> dbc089433f6b7582c41e667ca0681ce53a0f5978
 
     public Rectangles (){
         this.width = 1.0;
@@ -38,7 +42,7 @@ public class Rectangles {
     }
 
     public void setHeight(double height) {
-        if (height < 0) {
+        if (height <= 0) {
             throw new IllegalArgumentException("Width must be greater than 0");
         }
         this.height = height;
