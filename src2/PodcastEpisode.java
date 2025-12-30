@@ -1,4 +1,4 @@
-public class PodcastEpisode extends ContentItem {
+public class PodcastEpisode extends ContentItem implements Downloadable {
 
     private String hostName;
 
@@ -26,8 +26,17 @@ public class PodcastEpisode extends ContentItem {
     }
 
     @Override
+    public void download() {
+        System.out.println("Downloading podcast hosted by " + hostName + "...");
+    }
+
+    @Override
+    public int getMaxDownloadsPerDay() {
+        return 10;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + ", Host: " + hostName;
     }
 }
-

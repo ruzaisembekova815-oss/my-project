@@ -1,4 +1,4 @@
-public class VideoLecture extends ContentItem {
+public class VideoLecture extends ContentItem implements Downloadable {
 
     private String quality;
 
@@ -23,6 +23,16 @@ public class VideoLecture extends ContentItem {
         int age = getAge(currentYear);
         int ageFactor = (age <= 2) ? 5 : 2;
         return 0.05 * durationMinutes + ageFactor;
+    }
+
+    @Override
+    public void download() {
+        System.out.println("Downloading video in " + quality + "...");
+    }
+
+    @Override
+    public int getMaxDownloadsPerDay() {
+        return 3;
     }
 
     @Override
