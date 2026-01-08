@@ -101,7 +101,7 @@ public class FleetApp {
     private void serviceAll() {
         for (Vehicle v : vehicles) {
             if (v instanceof Servicable s) {
-                s.performService(); // polymorphism
+                s.performService(); 
             }
         }
     }
